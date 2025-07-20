@@ -1,59 +1,38 @@
-# 📊 Real-Time Data Pipeline with Kafka, PostgreSQL, and dbt
+🛠️ Data Pipeline Project with Kafka, Debezium & DBT
+📌 Overview
+This project implements a real-time data pipeline using the following technologies:
 
-هذا المشروع يمثل خط معالجة بيانات متكامل (End-to-End Data Pipeline) مبني بأدوات مفتوحة المصدر.  
-يهدف إلى قراءة بيانات من ملف CSV، إرسالها إلى Kafka، استهلاكها وتخزينها في قاعدة بيانات PostgreSQL، ثم تحليلها وتنظيفها باستخدام dbt.
+Kafka: To stream data from a source file into a Kafka topic.
 
----
+Kafka Consumer: To ingest the data from the topic into a database.
 
-## 🔧 مكونات المشروع
+Debezium: To monitor changes in the database and stream them to Kafka.
 
-1. **Kafka**: وسيط الرسائل لنقل البيانات من المنتج (Producer) إلى المستهلك (Consumer).
-2. **Python Producer**: يقرأ من ملف البيانات ويكتب إلى Kafka Topic.
-3. **Python Consumer**: يستهلك الرسائل من Kafka ويخزنها في قاعدة البيانات.
-4. **PostgreSQL**: قاعدة البيانات الوسيطة لتخزين البيانات الخام.
-5. **Deepnote / dbviz**: لمعاينة البيانات والتحقق منها (اختياري).
-6. **dbt**: لتنظيف وتحويل البيانات الخام إلى بيانات منظمة جاهزة للتحليل.
+DBT (Data Build Tool): To transform and clean the data into a production-ready table.
 
----
+⚙️ Technologies Used
+Apache Kafka
 
-## 🔁 مسار البيانات (Pipeline Flow)
+Kafka Connect + Debezium (CDC)
 
-CSV File
-↓
-Producer (Python)
-↓
-Kafka Topic
-↓
-Consumer (Python)
-↓
-Raw Table in PostgreSQL
-↓
-dbt Transformations
-↓
-Cleaned Table
+PostgreSQL (or your DB)
 
-yaml
-نسخ
-تحرير
+DBT (Data Build Tool)
 
----
+Python (for the producer & consumer scripts)
 
-## 📁 هيكل المشروع
+🔄 Pipeline Flow
+File to Kafka Producer
+A Python script reads data from a source file (CSV, JSON, etc.) and sends each record to a Kafka topic (raw-data-topic).
 
-project_root/
-│
-├── data/ # ملفات CSV الخام
-│ └── source_data.csv
-│
-├── kafka/ # ملفات Docker لتشغيل Kafka
-│ └── docker-compose.yaml
-│
-├── data_ingest/ # بروديوسر و كنسيومر
-│ ├── produce.py
-│ └── consumer.py
-│
-├── dbt_project/ # مشروع dbt
-│ ├── dbt_project.yml
-│ ├── models/
-│ │ └── cleaned_data.sql
-│ └── sources.yml
+Kafka Consumer to Database
+A Kafka consumer script listens to the topic and inserts the incoming records into a raw table in the database (raw_data table).
+
+Debezium + Kafka Connect
+Debezium monitors changes in the raw_data table and publishes Change Data Capture (CDC) events to a new Kafka topic (db-server.raw_data).
+
+Kafka Connect Sink Connector (optional)
+You can use Kafka Connect Sink to write CDC data to another table or a storage layer.
+
+DBT Transformations
+DBT models are used to clean and transform the raw CDC data into a clean, analytics-ready table (clean_data).
