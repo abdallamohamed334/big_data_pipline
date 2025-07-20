@@ -1,0 +1,42 @@
+[
+    {
+        "id": 232.0,
+        "name": "Greg Williamson",
+        "address": "58961 Sandra Lodge Apt. 253\nFigueroatown, IA 82520",
+        "city_name": "Wardmouth",
+        "phone": "388-358-6782x12620",
+        "card_number": "676203829152"
+    },
+    {
+        "id": 268.0,
+        "name": "Edward Wilson",
+        "address": "3840 Aaron Rapid Suite 353\nBradchester, WI 54619",
+        "city_name": "Nashton",
+        "phone": "404-890-6638x2724",
+        "card_number": "30281250804127"
+    },
+    {
+        "id": 839.0,
+        "name": "Casey Hicks",
+        "address": "72523 Carl Landing Suite 778\nLake Sarahmouth, MD 51540",
+        "city_name": "Amandamouth",
+        "phone": "839-726-3659",
+        "card_number": "3559957156281701"
+    },
+    {
+        "id": 939.0,
+        "name": "Alexandra King",
+        "address": "73439 Lisa Parks Suite 557\nWest Natasha, DE 88648",
+        "city_name": "West Toddfort",
+        "phone": "001-313-550-0274x9315",
+        "card_number": "4117172557132395"
+    },
+    {
+        "id": 310.0,
+        "name": "Natalie Copeland",
+        "address": "3439 Maria Lights\nHarringtonfurt, WV 83939",
+        "city_name": "South Sarah",
+        "phone": "414-284-1118x857",
+        "card_number": "36128284228506"
+    }
+]

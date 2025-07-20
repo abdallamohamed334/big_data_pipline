@@ -1,0 +1,6 @@
+version: 2
+
+sources:
+  - name: raw   # اسم مصدر البيانات (تقدر تغيره حسب قاعدة بياناتك)
+    tables:
+      - name: customer_raw

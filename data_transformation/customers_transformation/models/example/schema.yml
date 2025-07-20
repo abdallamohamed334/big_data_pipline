@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: cleaned_data
+    description: "بيانات بعد تنظيف رقم الهاتف فقط"
+    columns:
+      - name: id
+        description: "معرف فريد"
+        tests:
+          - unique
+          - not_null
+      - name: name
+        description: "اسم الشخص"
+      - name: address
+        description: "العنوان الكامل"
+      - name: city_name
+        description: "المدينة"
+      - name: clean_phone
+        description: "رقم الهاتف بعد إزالة extension"
+      - name: card_number
+        description: "رقم البطاقة"

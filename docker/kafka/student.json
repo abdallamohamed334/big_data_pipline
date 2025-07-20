@@ -1,0 +1,42 @@
+[
+    {
+        "id": 556.0,
+        "name": "John Armstrong",
+        "address": "4815 Thomas Radial\nSouth Royview, WY 44512",
+        "city_name": "Helenfort",
+        "phone": "+1-416-375-4684x0872",
+        "card_number": "587776729499"
+    },
+    {
+        "id": 421.0,
+        "name": "Anthony Stephens",
+        "address": "601 Patricia Light Apt. 177\nMichaelatown, IN 52216",
+        "city_name": "Lake Christinaville",
+        "phone": "+1-408-910-7876",
+        "card_number": "4461190331272"
+    },
+    {
+        "id": 955.0,
+        "name": "Gregory Melendez",
+        "address": "0377 Solomon Bypass\nWarrenmouth, AK 41777",
+        "city_name": "Robertmouth",
+        "phone": "200.471.1342x4786",
+        "card_number": "30148201770303"
+    },
+    {
+        "id": 428.0,
+        "name": "Sarah Brock",
+        "address": "0311 Hernandez Garden Apt. 597\nWest Jeffbury, SC 03186",
+        "city_name": "Lake Alisha",
+        "phone": "001-324-641-9977x22718",
+        "card_number": "060448728430"
+    },
+    {
+        "id": 306.0,
+        "name": "Kayla Owens",
+        "address": "408 Jennifer Mill\nEast Gina, PW 46969",
+        "city_name": "Haroldshire",
+        "phone": "227-403-5254",
+        "card_number": "4441233416447"
+    }
+]
