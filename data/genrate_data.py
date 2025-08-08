@@ -10,7 +10,6 @@ def generate_data(x):
     for _ in range(x):
      student = {
     'customer_id': f"VF{randint(100000, 999999)}",
-    'full_name': fake.name(),
     'gender': choice(['Male', 'Female']),
     'birthdate': fake.date_of_birth(minimum_age=18, maximum_age=70).strftime('%Y-%m-%d'),
     'national_id': fake.ssn(),
